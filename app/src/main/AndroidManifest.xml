@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fanyukeji.fanyuwallet">
+
+    <uses-permission android:name="android.permission.INTERNET">
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EthereumWalletActivity">
+
+        </activity>
+        <activity android:name=".CreateMnemonicActivity"/>
+        <activity android:name=".BackupActivity" />
+        <activity android:name=".GenerateMnemonicActivity" />
+        <activity android:name=".BackupCheckActivity" />
+        <activity android:name=".TransactionSuccessActivity" />
+        <activity android:name=".ExportMnemonicActivity"/>
+        <activity android:name=".ExportPrivateKeyActivity" />
+        <activity android:name=".ShowPrivateKeyActivity" />
+        <activity android:name=".ShowMnemonicActivity" />
+        <activity android:name=".ShowKeystoreActivity" />
+    </application>
+
+</manifest>

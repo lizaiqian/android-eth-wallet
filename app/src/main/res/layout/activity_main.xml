@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutStyle"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/toText"
+        android:hint="请输入转账地址"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/ethAmountText"
+        android:hint="请输入转账金额"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:hint="请输入钱包密码"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="转账"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onEthSend"/>
+
+    <Button
+        android:id="@+id/ethButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="创建以太坊钱包"
+        android:onClick="onstartEthWallet"/>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorName="BallPulseIndicator"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:onClick="exportMnemonic"
+        android:text="导出助记词"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="exportPrivateKey"
+        android:text="导出私钥"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="exportKeystore"
+        android:text="导出keystore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/navigation"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="0dp"-->
+        <!--android:layout_marginStart="0dp"-->
+        <!--android:background="?android:attr/windowBackground"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:menu="@menu/navigation" />-->
+
+</LinearLayout>
